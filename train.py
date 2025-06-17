@@ -50,7 +50,7 @@ def get_model(model_dir=None, warm_start=False):
         layers.Dense(2)
     ])
     model.compile(
-        optimizer='adam',
+        optimizer='sgd',
         loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
         metrics=['accuracy']
     )
